@@ -4,10 +4,10 @@ int main(void)
 {
     int n;
     int *p;
-
+    //複数バイトにまたがるオブジェクト(n)へのポインタ値(p)は、オブジェクトの先頭アドレスである。
     printf("int型は%uバイトです。\n",(unsigned)sizeof(int));
     printf("int *型は%uバイトです。\n",(unsigned)sizeof(int *));
-    
+
     printf("nは%uバイトです\n",(unsigned)sizeof(n));
     printf("*pは%uバイトです\n",(unsigned)sizeof(*p));
     printf("pは%uバイトです\n",(unsigned)sizeof(p));
