@@ -35,7 +35,5 @@ int main(void)
 
     printf("%d,%d,%d \n",*p[0],*p[1],*p[2]);
 
-
-
     return 0;
 }
