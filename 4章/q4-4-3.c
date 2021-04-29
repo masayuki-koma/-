@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+/*strもptrも変更する方法*/
 int main(void)
 {
     char str[5] = "ABCD";

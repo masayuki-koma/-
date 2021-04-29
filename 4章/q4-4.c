@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+//要するにscanfを使う場合と普通に="ABCD"みたいに値を代入する場合の違い
+//ポインタを文字列リテラルで初期化する場合と、メモリを確保している配列で初期化している場合
+//上の4パターンで場合わけされる。
 int main(void)
 {
     char str[5] = "ABCD";
@@ -9,6 +12,8 @@ int main(void)
     //ポインタの指す先に入力した文字列リテラルになる（要するにstrも変更？）
     printf("str = %s\n",str);
     printf("ptr = %s\n",&ptr[0]);
+    //zsh: bus error  ./q4-4　これはchar *ptr = "ABCD";のようにメモリ上の文字列リテラルをscanf("%s", ptr);で変更しようとしたときに生じるエラー
+    //基本的に文字列リテラルの書き換えは可能でない
     scanf("%s", ptr);
     //scanf("%s", str);
     //ptr = "CDEF"だとptrの指す値が""ABCD"の先頭アドレスから""CDEF"の先頭アドレスに変更されるだけなのでstrは変更されない
